@@ -1,1 +1,7 @@
-print("Hello from Docker inside GitHub Codespaces!")
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return {"message": "Hello from Docker + FastAPI in Codespaces!"}
